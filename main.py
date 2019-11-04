@@ -163,6 +163,7 @@ def main():
     #         weekend_shifts[(n, w)] = sum(shifts[(n, w, d, s)] for d in range(2) for s in all_shifts)
     #         model.Add(weekend_shifts[(n, w)] != 0)
 
+	# Alternative weekend strategy
     # Pharmacist who works Saturday morning also works Sunday morning and same for evening
     # So essentially the third pharmacist gets the whole weekend off (works for num_rph = 3)
     for n in all_rph:
