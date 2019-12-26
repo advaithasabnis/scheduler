@@ -213,7 +213,7 @@ def main():
     model.Minimize(sum(requests[(n, w, d, s)] * shifts[(n, w, d, s)]
                        for n in all_rph for w in all_weeks for d in all_days for s in all_shifts))
 
-    solver.Solve(model)
+    status = solver.Solve(model)
     for w in all_weeks:
         for s in all_shifts:
             for d in all_days:
